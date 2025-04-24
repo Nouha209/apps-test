@@ -1,1 +1,74 @@
+/* Arrière-plan et mise en page */
+body {
+    background: url('C:\Users\user\Desktop\flask_app\static\images\Banque.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
+/* Conteneur du formulaire */
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    text-align: center;
+}
+
+/* Titres */
+h1 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+/* Champs de formulaire */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+}
+
+input[type="text"]:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.6);
+}
+
+/* Bouton de prédiction */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Résultat de la prédiction */
+.prediction {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #27ae60;
+}
