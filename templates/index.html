@@ -1,1 +1,73 @@
-
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulation de votre Crédit</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #2c3e50, #4ca1af);
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            width: 350px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4ca1af;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #357f89;
+        }
+        .prediction {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Simulation de votre Crédit</h1>
+        <form action="/predict" method="post">
+            <input type="text" name="credit_history" placeholder="Historique de Crédit (0 ou 1)" required>
+            <input type="text" name="married" placeholder="Marié (0 ou 1)" required>
+            <input type="text" name="coapplicant_income" placeholder="Revenu du Co-demandeur" required>
+            <button type="submit">Prédire</button>
+        </form>
+        {% if prediction_text %}
+            <div class="prediction">
+                {{ prediction_text }}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
